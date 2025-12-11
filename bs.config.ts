@@ -1,7 +1,12 @@
 const { existsSync } = require("fs");
 const { join } = require("path");
 
+const host = process.env.HOST || 'localhost';
+const port = parseInt(process.env.PORT || '3000', 10);
+
 module.exports = {
+  host: host,
+  port: port,
   server: {
     baseDir: "pages", // 你的静态资源目录
   },
